@@ -39,7 +39,7 @@ Create an Oracle account
 Download and install MySQL community server
 Start MySQL sercer
 Login to MySQL using terminal:
-/usr/local/mysql/bin/mysql -u root -p
+'/usr/local/mysql/bin/mysql -u root -p'
 Use the configured password
 
 2. VSCode setup
@@ -75,75 +75,75 @@ Add new connection
 
 1. Total Revenue Generated in April 2025
 
-SELECT SUM(Total_Amount) AS Total_Revenue
+'SELECT SUM(Total_Amount) AS Total_Revenue
 FROM Bill
-WHERE Date BETWEEN '2025-04-01' AND '2025-04-30';
+WHERE Date BETWEEN '2025-04-01' AND '2025-04-30';'
 
 2. List of Patients Who Have Appointments with Dr. John
    
-SELECT P.First_Name, P.Last_Name, A.Date, A.Time
+'SELECT P.First_Name, P.Last_Name, A.Date, A.Time
 FROM Appointment A
 JOIN Patient P ON A.Patient_ID = P.Patient_ID
-WHERE A.Dentist_ID = 'U001';
+WHERE A.Dentist_ID = 'U001';'
 
 4. Treatments Performed on Each Patient
    
-SELECT P.First_Name, P.Last_Name, T.Treatment_Name, PR.Tooth_No, PR.Notes
+'SELECT P.First_Name, P.Last_Name, T.Treatment_Name, PR.Tooth_No, PR.Notes
 FROM Procedure_Record PR
 JOIN Patient P ON PR.Patient_ID = P.Patient_ID
-JOIN Treatment T ON PR.Treatment_ID = T.Treatment_ID;
+JOIN Treatment T ON PR.Treatment_ID = T.Treatment_ID;'
 
 6. List of Patients Prescribed ‘Ibuprofen’
 
-SELECT DISTINCT P.First_Name, P.Last_Name
+'SELECT DISTINCT P.First_Name, P.Last_Name
 FROM Prescription PR
 JOIN Prescription_Medicine PM ON PR.Prescription_ID = PM.Prescription_ID
 JOIN Medicine M ON PM.Medicine_ID = M.Medicine_ID
 JOIN Patient P ON PR.Patient_ID = P.Patient_ID
-WHERE M.Name = 'Ibuprofen';
+WHERE M.Name = 'Ibuprofen';'
 
 7. Unpaid Bills and Corresponding Patients
 
-SELECT P.First_Name, P.Last_Name, B.Total_Amount, B.Date
+'SELECT P.First_Name, P.Last_Name, B.Total_Amount, B.Date
 FROM Bill B
 JOIN Patient P ON B.Patient_ID = P.Patient_ID
-WHERE B.Paid = FALSE;
+WHERE B.Paid = FALSE;'
 
 8. Prescription Details for a Given Patient (e.g., Bob Johnson)
 
-SELECT M.Name AS Medicine, PM.Dosage
+'SELECT M.Name AS Medicine, PM.Dosage
 FROM Prescription PR
 JOIN Prescription_Medicine PM ON PR.Prescription_ID = PM.Prescription_ID
 JOIN Medicine M ON PM.Medicine_ID = M.Medicine_ID
-WHERE PR.Patient_ID = 'P002';
+WHERE PR.Patient_ID = 'P002';'
 
 9. All Procedures Performed by a Particular Dentist
 
-SELECT T.Treatment_Name, PR.Tooth_No, P.First_Name AS Patient, A.Date
+'SELECT T.Treatment_Name, PR.Tooth_No, P.First_Name AS Patient, A.Date
 FROM Procedure_Record PR
 JOIN Treatment T ON PR.Treatment_ID = T.Treatment_ID
 JOIN Appointment A ON PR.Appointment_ID = A.Appt_ID
 JOIN Patient P ON PR.Patient_ID = P.Patient_ID
-WHERE A.Dentist_ID = 'U001';
+WHERE A.Dentist_ID = 'U001';'
 
 10. X-ray Records with Notes for All Patients
 
-SELECT P.First_Name, P.Last_Name, XR.Tooth_No, XR.Image_Path, XR.Notes, XR.Date_Taken
+'SELECT P.First_Name, P.Last_Name, XR.Tooth_No, XR.Image_Path, XR.Notes, XR.Date_Taken
 FROM Xray_Record XR
-JOIN Patient P ON XR.Patient_ID = P.Patient_ID;
+JOIN Patient P ON XR.Patient_ID = P.Patient_ID;'
 
 11. Patients with Active Insurance Policies
 
-SELECT P.First_Name, P.Last_Name, I.Provider, I.Policy_No, I.Expiry_Date
+'SELECT P.First_Name, P.Last_Name, I.Provider, I.Policy_No, I.Expiry_Date
 FROM Insurance I
 JOIN Patient P ON I.Patient_ID = P.Patient_ID
-WHERE I.Expiry_Date > CURDATE();
+WHERE I.Expiry_Date > CURDATE();'
 
 12. List All Users and Their Roles
 
-SELECT U.Username, R.Role_Name
+'SELECT U.Username, R.Role_Name
 FROM User U
-JOIN Role R ON U.Role_ID = R.Role_ID;
+JOIN Role R ON U.Role_ID = R.Role_ID;'
 
 **User Approval Workflow:**
 

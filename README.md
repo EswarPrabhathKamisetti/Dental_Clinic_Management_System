@@ -26,9 +26,10 @@ SQL IDE                                        VSCode + SQLTools
 Diagramming                                    Lucidchart
 
 **Database Design**
-### 🗂️ ER Diagram
+ ER Diagram
+ ![ER Diagram](diagrams/ER_Diagram.jpeg)
 
-![ER Diagram](https://raw.githubusercontent.com/EswarPrabhathKamisetti/DentalClinicManagementSystem/main/ER_Diagram.jpeg)
+
 
 
 **Installation**

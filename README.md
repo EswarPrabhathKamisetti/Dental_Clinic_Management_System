@@ -4,19 +4,6 @@ An **SQL-based secure and scalable system** for managing the operations of a den
 
 ---
 
-## 📚 Table of Contents
-
-1. [Features](#features)
-2. [Tech Stack](#tech-stack)
-3. [Database Design](#database-design)
-4. [Installation](#installation)
-5. [Running the Project](#running-the-project)
-6. [Sample Queries](#sample-queries)
-7. [Security](#security)
-8. [Future Enhancements](#future-enhancements)
-
----
-
 ## ✅ Features
 
 - Patient Management  
@@ -206,17 +193,6 @@ JOIN Role R ON U.Role_ID = R.Role_ID;
 
 ---
 
-## 📁 Repository Structure
-
-```
-dental-clinic-management/
-├── schema.sql            # Full table structure
-├── sampledata.sql        # Sample INSERT statements
-├── README.md             # This documentation
-└── diagrams/             # ER/EER diagrams
-```
-
----
 
 ## 👨‍⚕️ Author
 
